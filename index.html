@@ -86,7 +86,10 @@
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Roofing & Waterproofing"}},
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Commercial Construction"}},
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Plastering, Tiling & Painting"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Paving & Boundary Walls"}}
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Paving & Boundary Walls"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Nutec House Construction"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Wendy House Construction"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Vibecrete House Construction"}}
       ]
     }
   }
@@ -102,7 +105,8 @@
       {"@type": "Question", "name": "Which areas do you work in?", "acceptedAnswer": {"@type": "Answer", "text": "Lee Construction serves clients across the Western Cape, South Africa. Get in touch and we will confirm availability in your area."}},
       {"@type": "Question", "name": "Do you handle both residential and commercial projects?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We build and renovate homes, and we also take on commercial and light-industrial building work."}},
       {"@type": "Question", "name": "How long does a renovation or build take?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the size and complexity of the job. After the site visit we give you a clear scope, price and realistic timeline in writing."}},
-      {"@type": "Question", "name": "Can you help with plans and approvals?", "acceptedAnswer": {"@type": "Answer", "text": "We can guide you through the process and work with your architect or draughtsperson so plans and municipal approvals are in order before building starts."}}
+      {"@type": "Question", "name": "Can you help with plans and approvals?", "acceptedAnswer": {"@type": "Answer", "text": "We can guide you through the process and work with your architect or draughtsperson so plans and municipal approvals are in order before building starts."}},
+      {"@type": "Question", "name": "Do you build Nutec, Wendy and Vibecrete houses without upfront payment?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Lee Construction offers Nutec, Wendy and Vibecrete house builds without upfront payment. Contact the team to discuss project requirements, scope and payment arrangements."}}
     ]
   }
   </script>
@@ -145,7 +149,11 @@
     .card { background:linear-gradient(180deg,#1b1f26,#14171c); border:1px solid rgba(255,255,255,.07); border-radius:1.1rem; transition:transform .35s ease, border-color .35s ease, box-shadow .35s ease; }
     .card:hover { transform:translateY(-6px); border-color:rgba(245,163,0,.55); box-shadow:0 24px 50px -24px rgba(245,163,0,.35); }
 
-    /* Gallery */
+    /* Consistent, polished project imagery */
+    .media-frame { isolation:isolate; background:#1f232b; }
+    .media-frame img { display:block; width:100%; height:100%; object-fit:cover; }
+    .shot { background:#1f232b; }
+    .shot img { display:block; }
     .shot img { transition:transform .8s cubic-bezier(.2,.7,.2,1); }
     .shot:hover img { transform:scale(1.08); }
     .shot .cap { transform:translateY(12px); opacity:0; transition:all .4s ease; }
@@ -218,6 +226,7 @@
           <svg class="w-5 h-5 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
           065 107 5687
         </a>
+        <a href="https://www.facebook.com/share/19zK8F1TkQ/" target="_blank" rel="noopener noreferrer" class="hidden xl:inline-flex text-sm font-semibold text-white hover:text-brand transition" aria-label="Visit Lee Construction on Facebook">Facebook</a>
         <a href="#contact" class="btn btn-primary !py-2.5 !px-5 hidden sm:inline-flex text-sm">Free Quote</a>
         <button id="menuBtn" class="lg:hidden w-11 h-11 grid place-items-center rounded-lg border border-white/15 text-white" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
           <svg id="icoOpen" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
@@ -232,7 +241,8 @@
         <a class="py-3 border-b border-white/5 text-lg text-white" href="#process">Process</a>
         <a class="py-3 border-b border-white/5 text-lg text-white" href="#projects">Projects</a>
         <a class="py-3 border-b border-white/5 text-lg text-white" href="#faq">FAQ</a>
-        <a class="py-3 text-lg text-white" href="#contact">Contact</a>
+        <a class="py-3 border-b border-white/5 text-lg text-white" href="#contact">Contact</a>
+        <a class="py-3 text-lg text-white" href="https://www.facebook.com/share/19zK8F1TkQ/" target="_blank" rel="noopener noreferrer">Facebook</a>
         <a href="tel:+27651075687" data-track="phone_click" class="btn btn-primary mt-3">Call 065 107 5687</a>
       </nav>
     </div>
@@ -298,7 +308,7 @@
         <div class="max-w-2xl reveal">
           <p class="text-brand text-sm font-semibold uppercase tracking-[.25em]">What we do</p>
           <h2 class="mt-3 text-4xl sm:text-6xl font-extrabold text-white uppercase leading-none">Building &amp; construction services in the Western Cape</h2>
-          <p class="mt-5 text-gray-400 text-lg">From the first brick to the final coat of paint, we handle your project with care, skill and straight-talking communication.</p>
+          <p class="mt-5 text-gray-400 text-lg">From traditional building work to alternative home builds, we handle your project with care, skill and straight-talking communication. Ask us about our Nutec, Wendy and Vibecrete house options with no upfront payment.</p>
         </div>
 
         <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
@@ -332,8 +342,29 @@
             <h3 class="mt-5 text-2xl font-bold text-white uppercase">Paving &amp; Boundary Walls</h3>
             <p class="mt-3 text-gray-400 leading-relaxed">Driveways, patios, retaining and boundary walls built strong, straight and made to last.</p>
           </article>
+          <article class="card p-7 reveal" style="--d:.08s">
+            <div class="w-14 h-14 rounded-xl bg-brand/10 text-brand grid place-items-center"><svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18M5 20V9l7-5 7 5v11M9 20v-6h6v6"/></svg></div>
+            <h3 class="mt-5 text-2xl font-bold text-white uppercase">Nutec Houses</h3>
+            <p class="mt-3 text-gray-400 leading-relaxed">Practical Nutec home builds planned around your space and requirements. No upfront payment.</p>
+          </article>
+          <article class="card p-7 reveal" style="--d:.16s">
+            <div class="w-14 h-14 rounded-xl bg-brand/10 text-brand grid place-items-center"><svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18M4 20V9l8-5 8 5v11M8 20v-5h8v5"/></svg></div>
+            <h3 class="mt-5 text-2xl font-bold text-white uppercase">Wendy Houses</h3>
+            <p class="mt-3 text-gray-400 leading-relaxed">Wendy house builds for extra living, storage or workspace, with no upfront payment.</p>
+          </article>
+          <article class="card p-7 reveal" style="--d:.24s">
+            <div class="w-14 h-14 rounded-xl bg-brand/10 text-brand grid place-items-center"><svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18M5 20V8l7-4 7 4v12M8 12h8M8 16h8"/></svg></div>
+            <h3 class="mt-5 text-2xl font-bold text-white uppercase">Vibecrete Houses</h3>
+            <p class="mt-3 text-gray-400 leading-relaxed">Vibecrete house solutions designed to suit your needs, with no upfront payment.</p>
+          </article>
         </div>
 
+        <div class="mt-10 rounded-2xl border border-brand/40 bg-brand/10 p-6 sm:p-8 reveal">
+          <p class="text-brand text-xs sm:text-sm font-bold uppercase tracking-[.22em]">A simpler way to get started</p>
+          <h3 class="mt-2 font-display text-3xl sm:text-4xl font-extrabold uppercase text-white">Nutec, Wendy &amp; Vibecrete houses — no upfront payment</h3>
+          <p class="mt-2 text-gray-300 leading-relaxed">Speak to our team about the build you have in mind. We will discuss your requirements, scope and payment arrangements before work begins.</p>
+          <a href="#contact" class="inline-flex mt-5 font-semibold text-brand hover:text-white transition">Request details and a quote &rarr;</a>
+        </div>
         <div class="mt-12 text-center reveal">
           <a href="#contact" data-track="services_quote_click" class="btn btn-primary">Discuss your project &rarr;</a>
         </div>
@@ -345,7 +376,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <div class="relative reveal">
           <div class="absolute -inset-3 sm:-inset-4 border-2 border-brand/40 rounded-3xl translate-x-3 translate-y-3 -z-0"></div>
-          <img src="https://images.pexels.com/photos/8961624/pexels-photo-8961624.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=800&w=1000" width="1000" height="800" loading="lazy" decoding="async" alt="Lee Construction team preparing timber on site in the Western Cape" class="relative rounded-2xl w-full h-auto object-cover aspect-[5/4] shadow-2xl">
+          <img decoding="async" src="https://images.pexels.com/photos/8961624/pexels-photo-8961624.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=800&w=1000" width="1000" height="800" loading="lazy" decoding="async" alt="Lee Construction team preparing timber on site in the Western Cape" class="relative rounded-2xl w-full h-auto object-cover aspect-[5/4] shadow-2xl">
           <div class="absolute -bottom-6 left-4 sm:left-8 bg-brand text-ink rounded-xl px-5 py-4 shadow-xl">
             <p class="font-display text-3xl font-extrabold uppercase leading-none">Built on trust</p>
             <p class="text-xs font-semibold mt-1">Honest advice. Quality work.</p>
@@ -396,32 +427,32 @@
 
         <div class="mt-12 grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5 auto-rows-[160px] sm:auto-rows-[230px]">
           <figure class="shot relative overflow-hidden rounded-2xl col-span-2 row-span-2 reveal">
-            <img src="https://images.pexels.com/photos/33404353/pexels-photo-33404353.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1200" width="1200" height="900" loading="lazy" decoding="async" alt="Timber house framing under construction" class="absolute inset-0 w-full h-full object-cover">
+            <img decoding="async" src="https://images.pexels.com/photos/33404353/pexels-photo-33404353.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1200" width="1200" height="900" loading="lazy" decoding="async" alt="Timber house framing under construction" fetchpriority="low" class="absolute inset-0 w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
             <figcaption class="cap absolute bottom-0 p-5"><span class="text-brand text-xs font-semibold uppercase tracking-widest">New Build</span><p class="font-display text-2xl sm:text-3xl font-bold text-white uppercase">Structural framing</p></figcaption>
           </figure>
           <figure class="shot relative overflow-hidden rounded-2xl reveal" style="--d:.08s">
-            <img src="https://images.pexels.com/photos/37499253/pexels-photo-37499253.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=600&w=800" width="800" height="600" loading="lazy" decoding="async" alt="Builder constructing a timber roof structure" class="absolute inset-0 w-full h-full object-cover">
+            <img decoding="async" src="https://images.pexels.com/photos/37499253/pexels-photo-37499253.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=600&w=800" width="800" height="600" loading="lazy" decoding="async" alt="Builder constructing a timber roof structure" class="absolute inset-0 w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
             <figcaption class="cap absolute bottom-0 p-4"><span class="text-brand text-xs font-semibold uppercase tracking-widest">Roofing</span><p class="font-display text-xl font-bold text-white uppercase">Roof structures</p></figcaption>
           </figure>
           <figure class="shot relative overflow-hidden rounded-2xl reveal" style="--d:.12s">
-            <img src="https://images.pexels.com/photos/6510984/pexels-photo-6510984.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=600&w=800" width="800" height="600" loading="lazy" decoding="async" alt="Renovated modern kitchen with white cabinets" class="absolute inset-0 w-full h-full object-cover">
+            <img decoding="async" src="https://images.pexels.com/photos/6510984/pexels-photo-6510984.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=600&w=800" width="800" height="600" loading="lazy" decoding="async" alt="Renovated modern kitchen with white cabinets" class="absolute inset-0 w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
             <figcaption class="cap absolute bottom-0 p-4"><span class="text-brand text-xs font-semibold uppercase tracking-widest">Renovation</span><p class="font-display text-xl font-bold text-white uppercase">Kitchen upgrades</p></figcaption>
           </figure>
           <figure class="shot relative overflow-hidden rounded-2xl reveal">
-            <img src="https://images.pexels.com/photos/8961555/pexels-photo-8961555.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=600&w=800" width="800" height="600" loading="lazy" decoding="async" alt="Builders working on a house exterior renovation" class="absolute inset-0 w-full h-full object-cover">
+            <img decoding="async" src="https://images.pexels.com/photos/8961555/pexels-photo-8961555.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=600&w=800" width="800" height="600" loading="lazy" decoding="async" alt="Builders working on a house exterior renovation" class="absolute inset-0 w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
             <figcaption class="cap absolute bottom-0 p-4"><span class="text-brand text-xs font-semibold uppercase tracking-widest">Extensions</span><p class="font-display text-xl font-bold text-white uppercase">Home exteriors</p></figcaption>
           </figure>
           <figure class="shot relative overflow-hidden rounded-2xl reveal" style="--d:.08s">
-            <img src="https://images.pexels.com/photos/35430095/pexels-photo-35430095.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=600&w=800" width="800" height="600" loading="lazy" decoding="async" alt="Spacious kitchen with wooden cabinetry" class="absolute inset-0 w-full h-full object-cover">
+            <img decoding="async" src="https://images.pexels.com/photos/35430095/pexels-photo-35430095.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=600&w=800" width="800" height="600" loading="lazy" decoding="async" alt="Spacious kitchen with wooden cabinetry" class="absolute inset-0 w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
             <figcaption class="cap absolute bottom-0 p-4"><span class="text-brand text-xs font-semibold uppercase tracking-widest">Interiors</span><p class="font-display text-xl font-bold text-white uppercase">Quality finishes</p></figcaption>
           </figure>
           <figure class="shot relative overflow-hidden rounded-2xl col-span-2 lg:col-span-1 reveal" style="--d:.12s">
-            <img src="https://images.pexels.com/photos/38706756/pexels-photo-38706756.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=600&w=800" width="800" height="600" loading="lazy" decoding="async" alt="Construction crew in safety gear on scaffolding" class="absolute inset-0 w-full h-full object-cover">
+            <img decoding="async" src="https://images.pexels.com/photos/38706756/pexels-photo-38706756.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=600&w=800" width="800" height="600" loading="lazy" decoding="async" alt="Construction crew in safety gear on scaffolding" class="absolute inset-0 w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
             <figcaption class="cap absolute bottom-0 p-4"><span class="text-brand text-xs font-semibold uppercase tracking-widest">Commercial</span><p class="font-display text-xl font-bold text-white uppercase">Safe, skilled crews</p></figcaption>
           </figure>
@@ -464,6 +495,10 @@
           <details class="card !rounded-xl p-5 sm:p-6 reveal">
             <summary class="flex items-center justify-between gap-4 text-lg font-semibold text-white">How long does a renovation or build take? <span class="plus text-brand text-3xl leading-none shrink-0">+</span></summary>
             <p class="mt-3 text-gray-400 leading-relaxed">It depends on the size and complexity of the job. After the site visit we give you a clear scope, price and realistic timeline in writing.</p>
+          </details>
+          <details class="card !rounded-xl p-5 sm:p-6 reveal">
+            <summary class="flex items-center justify-between gap-4 text-lg font-semibold text-white">Do you build Nutec, Wendy and Vibecrete houses without upfront payment? <span class="plus text-brand text-3xl leading-none shrink-0">+</span></summary>
+            <p class="mt-3 text-gray-400 leading-relaxed">Yes. We offer Nutec, Wendy and Vibecrete house builds without upfront payment. Contact us to discuss your requirements, project scope and payment arrangements.</p>
           </details>
           <details class="card !rounded-xl p-5 sm:p-6 reveal">
             <summary class="flex items-center justify-between gap-4 text-lg font-semibold text-white">Can you help with plans and approvals? <span class="plus text-brand text-3xl leading-none shrink-0">+</span></summary>
@@ -525,6 +560,9 @@
                   <option>Commercial Construction</option>
                   <option>Plastering, Tiling &amp; Painting</option>
                   <option>Paving &amp; Boundary Walls</option>
+                  <option>Nutec House</option>
+                  <option>Wendy House</option>
+                  <option>Vibecrete House</option>
                   <option>Other / Not sure</option>
                 </select>
               </div>
@@ -577,6 +615,7 @@
               <ul class="mt-3 space-y-3 text-gray-400">
                 <li>Phone: <a class="text-white hover:text-brand transition" href="tel:+27651075687" data-track="phone_click" itemprop="telephone">065 107 5687</a></li>
                 <li>WhatsApp: <a class="text-white hover:text-brand transition" href="https://wa.me/27651075687" target="_blank" rel="noopener" data-track="whatsapp_click">Message us</a></li>
+                <li>Facebook: <a class="text-white hover:text-brand transition" href="https://www.facebook.com/share/19zK8F1TkQ/" target="_blank" rel="noopener noreferrer">Follow Lee Construction</a></li>
                 <li itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="addressRegion">Western Cape</span>, <span itemprop="addressCountry">South Africa</span></li>
               </ul>
             </div>
